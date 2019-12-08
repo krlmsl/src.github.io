@@ -1,0 +1,101 @@
+.footer {
+  background: #232839;
+  padding-bottom: 50px;
+  color: rgba(#FFF, .5);
+}
+.scroll-top {
+  text-align: center;
+  padding: 20px 15px;
+  margin-bottom: 25px;
+  color: #FFF;
+  transition: all .4s $beizer;
+  border-bottom: 1px solid rgba(#FFF, .1);
+  cursor: pointer;
+
+  &:hover {
+    background: darken(#232839, 3%);
+    color: #FFF;
+  }
+}
+.svg-scroll-up {
+  width: 11px;
+  height: 17px;
+}
+.footer-top {
+  margin-bottom: 22px;
+}
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.footer-menu {
+  padding-left: 30px;
+  padding-top: 5px;
+
+  li {
+    display: inline-block;
+    margin-right: 25px;
+    margin-bottom: 6px;
+  }
+  a {
+    color: #FFF;
+
+    &:hover, &.active {
+      color: $primary;
+    }
+  }
+}
+
+.footer-bottom {
+  @include fz(13);
+}
+.footer-rights {
+  margin-bottom: 15px;
+}
+.footer-contacts {
+  text-align: right;
+}
+.footer-callback {
+  margin-right: 16px;
+  color: rgba(#FFF, .5);
+  border-bottom: 1px solid rgba(#FFF, .5);
+
+  &:hover {
+    border-bottom-color: transparent;
+  }
+}
+.footer-socials {
+  &-title {
+    &:after {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 12px;
+      width: 8px;
+      height: 1px;
+      background: #91939C;;
+    }
+  }
+  &-link {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+    width: 18px;
+    height: 18px;
+    margin-left: 9px;
+
+    &:firs-child {
+      width: 23px;
+    }
+
+    svg {
+      fill: #91939C;
+    }
+    &:hover {
+      svg {
+        fill: #FFF;
+      }
+    }
+  }
+}

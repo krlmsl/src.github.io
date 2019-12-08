@@ -1,0 +1,205 @@
+.header {
+	margin-bottom: 28px;
+}
+.h-top {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.h-logo {
+	margin-right: 16px;
+}
+.h-search {
+	position: relative;
+	-ms-flex: 1 0 auto;
+	flex: 1 0 auto;
+	margin-right: 16px;
+	
+	input#{&}-input {
+		height: 50px;
+		width: 100%;
+		padding-left: 50px;
+	}
+	button#{&}-btn {
+		position: absolute;
+		left: 20px;
+		top: 50%;
+		margin-top: -9px;
+		padding: 0;
+		border: 0;
+		font-size: 0;
+		text-indent: -999px;
+		cursor: pointer;
+		background: transparent;
+
+		svg {
+			stroke: $gray;
+		}
+		&:hover {
+			svg {
+				stroke: $primary;
+			}
+		}
+	}
+}
+.svg-searcher {
+	width: 18px;
+	height: 18px;
+}
+
+.h-socials {
+	border: 1px solid $border;
+	font-size: 0;
+	margin-right: 16px;
+
+	&-item {
+		display: inline-block;
+		width: 49px;
+		height: 48px;
+		border-right: 1px solid $border;
+		padding: 12px;
+		text-align: center;
+
+		&:last-child {
+			border-right: 0;
+		}
+
+		svg {
+			fill: $gray;
+			max-width: 18px;
+			margin-left: auto;
+			margin-right: auto;
+
+			&.social-icon-vk {
+				max-width: 23px;
+			}
+		}
+		&:hover {
+			svg {
+				fill: $secondary;
+			}
+		}
+	}
+}
+
+.h-lang {
+	position: relative;
+	margin-right: 16px;
+
+	&:hover {
+		border-color: $input_hover;
+	}
+
+	&-toggler {
+		height: 50px;
+		line-height: 48px;
+		border: 1px solid $border;
+		padding: 0px 20px;
+		cursor: pointer;
+		color: $gray;
+		transition: .3s;
+
+		&:before {
+			content: "";
+			position: relative;
+			top: -2px;
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 4px;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 6px 4px 0 4px;
+			border-color: $gray transparent transparent transparent;
+
+		}
+	}
+
+
+	&-drop {
+		position: absolute;
+		left: 0;
+		top: 100%;
+		width: 100%;
+		background: #FFF;
+		z-index: 99;
+		visibility: hidden;
+		opacity: 0;
+		border: 1px solid $border;
+		transition: all .15s;
+
+		&.opened {
+			visibility: visible;
+			opacity: 1;
+		}
+
+		a {
+			display: block;
+			padding: 15px 20px;
+			border-bottom: 1px solid $border;
+			color: $font;
+
+			&:hover {
+				color: $primary;
+			}
+
+			&:last-child {
+				border-bottom: 0;
+			}
+		}
+	}
+}
+.h-live {
+	height: 50px;
+	line-height: 50px;
+	padding: 0px 20px;
+	background: $secondary;
+	color: #FFF;
+	font-weight: 700;
+	text-transform: uppercase;
+
+	&:hover {
+		background: $secondary_hover;
+		color: #FFF;
+	}
+
+	.i-dot {
+		width: 6px;
+		height: 6px;
+		background: #FFF;
+		border-radius: 50%;
+		margin-right: 5px;
+	}
+}
+
+.h-menu {
+	background: $primary;
+	padding: 15px 0;
+}
+.main-menu {
+	font-size: 0;
+
+	ul {
+		margin-left: -16px;
+		margin-right: -16px;
+	}
+	li {
+		display: inline-block;
+	}
+	a {
+		@include fz($fontsize);
+		display: block;
+		padding: 6px 16px;
+		line-height: 1;
+		text-transform: uppercase;
+		color: #FFF;
+		border-radius: 0px 20px 0px 20px;
+
+		&:hover, &.active {
+			background: #FFF;
+			color: $font;
+		}
+	}
+}
+.mobile-search-toggler {
+	display: none;
+}
